@@ -10,4 +10,4 @@ function evenPowersOf2(input) {
     }
 
 }
-evenPowersOf2(["3"])
+evenPowersOf2(["12"])

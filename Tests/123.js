@@ -1,13 +1,7 @@
-function functionf(input) {
-
-  let num = Number(input[0])
-
-
-  for (let i = num; i <= num; i--) {
-    console.log(i)
-    if (i == 0) {
-      break;
-    }
+function invalidNumber(input) {
+  let num = Number(input[0]);
+  if (num < 100 || num > 200 && num !=0){
+      console.log("invalid")
   }
 }
-functionf([10])
+invalidNumber([299])

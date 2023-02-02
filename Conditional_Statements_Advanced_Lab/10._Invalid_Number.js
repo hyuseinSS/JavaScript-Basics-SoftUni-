@@ -1,8 +1,8 @@
-function invalidNumber(input){
+function invalidNumber(input) {
     let num = Number(input[0])
 
-    let isValid = num===0 || num >= 100 && num <= 200
-if (!isValid)
-console.log("invalid")    
+    let isValid = num === 0 || num >= 100 && num <= 200
+    if (!isValid) 
+        console.log("invalid")
 }
-invalidNumber(["75"])
+invalidNumber(["123"])
