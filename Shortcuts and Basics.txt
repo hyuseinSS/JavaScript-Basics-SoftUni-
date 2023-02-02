@@ -1,0 +1,12 @@
+Shortcuts:
+
+1       Ctrl + /  = comment
+2       Ctrl + F5 = run without debugging
+3 Shift + Alt + F = Format Document
+4 'log' + TAB       = console.log;
+Терминология:
+
+NaN = Not a Number
+&& =  логическо И
+|| = логическо ИЛИ
+`` = backtick / Интерполиран стринг
