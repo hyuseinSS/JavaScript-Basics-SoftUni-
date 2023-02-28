@@ -1,49 +1,47 @@
 function sumOfTwoNumbers(input) {
 
+    let index = 0
+    let intervalStart = Number(input[index])
+    index++
+    let intervalEnd = Number(input[index])
+    index++
+    let targetNumber = Number(input[index])
 
-    let intervalStart = Number(input[0])
-    let intervalEnd = Number(input[1])
-    let targetNumber = Number(input[2])
     let comboCounter = 0
-    let num1 = 0
-    let num2 = 0
 
-    for (num1 = intervalStart; num1 <= intervalEnd; num1++) {
-        comboCounter++
+    let n1 = 0
+    let n2 = 0
+    let total = n1 + n2
 
-        for (num2 = intervalStart; num2 <= intervalEnd; num2++) {
-
-            if (num1 + num2 !== targetNumber || num2 + num1 >= targetNumber) {
-                comboCounter++
-                continue
-            } else {
-                break
-            }
-
-
-        }
-        if (num1 + num2 == targetNumber) {
-
-            console.log(`Combination N:${comboCounter} `)
-            console.log(`(${num1} + ${num2} = ${targetNumber})`)
+    for (n1 = intervalStart; n1 <= intervalEnd; n1++) {
+        for (n2 = intervalStart; n2 <= intervalEnd; n2++) {
+            total = n1 + n2;
             comboCounter++
+            if (total == targetNumber) {
+                console.log(`Combination N:${comboCounter} (${n1} + ${n2} = ${targetNumber})`)
+                return;
+            }
+        }
+        if (total == targetNumber) {
+            console.log(`Combination N:${comboCounter} (${n1} + ${n2} = ${targetNumber})`)
             break;
         }
-        else {
-            console.log(`${comboCounter + 1} combinations - neither equals ${targetNumber}`)
-            break;
-        }
+
+
     }
 
+    if (n1 + n2 != targetNumber) {
+        console.log(`${comboCounter} combinations - neither equals ${targetNumber}`)
+    }
 }
 
-// sumOfTwoNumbers([1, 10, 5])
-// sumOfTwoNumbers(["23",
-//     "24",
-//     "20"])
-// sumOfTwoNumbers(["88",
-//     "888",
-//     "2000"])
+sumOfTwoNumbers([1, 10, 5])
+sumOfTwoNumbers(["23",
+    "24",
+    "20"])
+sumOfTwoNumbers(["88",
+    "888",
+    "2000"])
 sumOfTwoNumbers(["88",
     "888",
     "1000"])

@@ -7,7 +7,7 @@ function oldBooks(input) {
 
     let i = 1
 
-    let currentBook = ""
+
 
     while (true) {
         let currentBook = input[i]

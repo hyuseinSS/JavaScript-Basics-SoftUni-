@@ -45,8 +45,8 @@ function hotelRoom(input) {
 
 
 }
-hotelRoom(["May", 0
-    , "15"])
+hotelRoom(["May",
+    "15"])
 
 hotelRoom(["June",
     "14"])

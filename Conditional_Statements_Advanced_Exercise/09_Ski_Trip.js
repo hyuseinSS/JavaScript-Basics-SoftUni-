@@ -1,4 +1,4 @@
-function skiTrip(input) {
+function santa(input) {
 
 
     let days = Number(input[0])
@@ -8,8 +8,8 @@ function skiTrip(input) {
     let nights = days - 1
 
 
-    let roomForOne = 18 * nights
-    let presidentApartment = 35 * nights
+    let priceOfRoomForOne = 18 * nights
+    let priceOfPresidentApartment = 35 * nights
     let apartment = 25 * nights
 
     if (typeOfAccomodation == "apartment") {
@@ -25,22 +25,22 @@ function skiTrip(input) {
     }
     if (typeOfAccomodation == "president apartment") {
         if (nights < 10) {
-            presidentApartment *= 0.90
+            priceOfPresidentApartment *= 0.90
         } else if (nights > 10 && nights < 15) {
-            presidentApartment *= 0.85
+            priceOfPresidentApartment *= 0.85
         } else if (nights > 15) {
-            presidentApartment *= 0.80
+            priceOfPresidentApartment *= 0.80
         }
     }
     if (grade == "positive") {
         apartment *= 1.25
-        presidentApartment *= 1.25
-        roomForOne *= 1.25
+        priceOfPresidentApartment *= 1.25
+        priceOfRoomForOne *= 1.25
     }
     else {
         apartment *= 0.90
-        presidentApartment *= 0.90
-        roomForOne *= 0.90
+        priceOfPresidentApartment *= 0.90
+        priceOfRoomForOne *= 0.90
     }
 
     if (typeOfAccomodation == "apartment") {
@@ -49,22 +49,18 @@ function skiTrip(input) {
     }
     else if (typeOfAccomodation == "president apartment") {
 
-        console.log(presidentApartment.toFixed(2))
+        console.log(priceOfPresidentApartment.toFixed(2))
 
     } else {
 
-        console.log(roomForOne.toFixed(2))
+        console.log(priceOfRoomForOne.toFixed(2))
 
     }
 
 }
-skiTrip(["14", "apartment", "positive"])
-skiTrip(["30",
-    "president apartment",
-    "negative"])
-skiTrip(["12",
-    "room for one person",
-    "positive"])
-skiTrip(["2",
+santa(["14",
     "apartment",
     "positive"])
+santa(["30",
+    "president apartment",
+    "negative"])
