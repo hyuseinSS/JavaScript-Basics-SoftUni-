@@ -12,22 +12,22 @@ function steps(input) {
 
         let currentSteps = Number(input[i])
 
-        if (totalSteps >= 1000) {
+        if (totalSteps >= 10000) {
             console.log(`Goal reached! Good job!`)
-            if (totalSteps > 1000) {
-                console.log(`${totalSteps - 1000} steps over the goal!`)
+            if (totalSteps > 10000) {
+                console.log(`${totalSteps - 10000} steps over the goal!`)
             }
 
             break
         }
         if (isNaN(currentSteps) == true) {
             totalSteps += Number(input[i + 1])
-            if (totalSteps < 1000) {
-                console.log(`${1000 - totalSteps} more steps to reach goal.`)
+            if (totalSteps < 10000) {
+                console.log(`${10000 - totalSteps} more steps to reach goal.`)
                 break
             } else {
                 console.log("Goal reached! Good job!")
-                console.log(`${totalSteps - 1000} steps over the goal!`)
+                console.log(`${totalSteps - 10000} steps over the goal!`)
                 break
             }
         }
